@@ -1,6 +1,6 @@
-# Shouldiwatch
+# Should I Watch
 
-This README outlines the details of collaborating on this Ember application.
+Calculate a weighted Rotten Tomatoes, Metacritic, and IMDB collective rating to answer the common "should I watch?" question.
 
 ## Installation
 
@@ -11,15 +11,8 @@ This README outlines the details of collaborating on this Ember application.
 ## Running
 
 * `ember server`
-* Visit your app at http://localhost:4200.
 
 ## Running Tests
 
 * `ember test`
 * `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](http://iamstef.net/ember-cli/).
