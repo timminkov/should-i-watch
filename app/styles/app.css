@@ -326,3 +326,23 @@ td.text-right {
 .more-info-link {
   text-decoration: underline;
 }
+
+.social {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.icon {
+  width: 96px;
+  height: 96px;
+  display: block;
+}
+
+.github {
+  background: url("/assets/images/github.png");
+}
+
+.linkedin {
+  background: url("/assets/images/linkedin.png");
+}
