@@ -3,14 +3,14 @@
     <div class='movie'>
       <div class="image_container">
         <span class="movie-title">{{title}}</span>
-        <a {{bind-attr href="posterImage" }} class="image">Image Link</a>
+        <a {{bind-attr href="posterImage"}} class="image">Image Link</a>
       </div>
 
       <div class="score_details">
         <div class='score'>{{totalScore}}</div>
         <div class='suggestion'>{{shouldIWatch}}</div>
         <div>{{uncertainText}}</div>
-        <div class='search_again suggestion'>{{#link-to 'search' classNames="white-link"}}Search again?{{/link-to}} | <span {{action 'moreInfo'}} class="more-info-link">More info</span></div>
+        <div class='search_again suggestion'>{{#link-to 'search' classNames="white-link"}}Search again?{{/link-to}} | <span {{action 'moreInfo'}} class="more-info-link">More info</span> | <a {{bind-attr href="imdbID"}} class='moreInfo'>IMDB</a></div>
       </div>
     </div>
 

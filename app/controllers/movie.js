@@ -3,7 +3,11 @@ import Ember from 'ember';
 export default Ember.ObjectController.extend({
   actions: {
     moreInfo: function() {
-      this.set('needMoreInfo', true);
+      if (this.get('needMoreInfo') == false) {
+        this.set('needMoreInfo', true);
+      } else {
+        this.set('needMoreInfo', false);
+      }
     }
   },
 
@@ -16,6 +20,11 @@ export default Ember.ObjectController.extend({
       return '';
     }
   }.property('model.uncertainText'),
+
+  imdbID: function() {
+    var id = this.get('id');
+    return 'http://imdb.com/title/' + id;
+  }.property('model.imdbID'),
 
 });
 

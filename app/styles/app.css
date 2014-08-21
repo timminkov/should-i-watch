@@ -312,6 +312,7 @@ td.text-right {
 .more-info {
   color: white;
   font-family: RalewayRegular;
+  display: inline-block;
   width: 69%;
   margin: 0 auto;
 }
@@ -322,6 +323,23 @@ td.text-right {
 }
 
 .more-info li {
+  margin-bottom: 4px;
+}
+
+.formula {
+  color: white;
+  display: inline-block;
+  font-family: RalewayRegular;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.formula ul {
+  padding: 0;
+  list-style: none;
+}
+
+.formula li {
   margin-bottom: 4px;
 }
 
@@ -351,4 +369,10 @@ td.text-right {
 
 .movie-title {
   font-size: 300%;
+  display: block;
+}
+
+.image {
+  display: block;
+  color: white;
 }

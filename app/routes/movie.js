@@ -31,6 +31,16 @@ var MovieParser = function(data) {
         tomatoConsensus: data.tomatoConsensus,
         posterImage: data.Poster,
         totalScore: totalScore,
+        tomatoMeter: data.tomatoMeter,
+        tomatoRating: data.tomatoRating,
+        tomatoVotes: data.tomatoReviews,
+        tomatoUserMeter: data.tomatoUserMeter,
+        tomatoUserRating: data.tomatoUserRating,
+        tomatoUserVotes: data.tomatoUserReviews,
+        imdbRating: data.imdbRating,
+        imdbVotes: data.imdbVotes,
+        metascore: data.Metascore,
+        id: data.imdbID,
       };
 
       return parsedData;
