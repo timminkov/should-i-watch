@@ -1,0 +1,15 @@
+{{#view 'search'}}
+  <div id='results'>
+    <table class="table-fill">
+      <tbody class='table-hover'>
+        {{#each}}
+          <tr {{action 'movie' imdbID}}>
+            <td>{{Title}}</td>
+            <td>{{Year}}</td>
+            <td>{{Type}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{/view}}

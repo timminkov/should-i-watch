@@ -1,0 +1,20 @@
+{{#view 'search'}}
+  <div class='search'>
+    <div class='title'>Should I watch...</div>
+
+    {{input action="search" name="search" class='search-box' }}
+
+    <div class='description'>Type in a movie or TV show to get a computed rating and suggestion based on Rotten Tomatoes, IMDB, and Metacritic.</div>
+  </div>
+
+<div class="spinner hidden">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+
+  {{#if resultsToRender}}
+    {{partial 'results'}}
+  {{/if}}
+
+{{/view}}

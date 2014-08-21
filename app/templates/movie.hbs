@@ -1,0 +1,21 @@
+{{#view 'search'}}
+  <div class='container'>
+    <div class='movie'>
+      <div class="image_container">
+        <img {{bind-attr src="posterImage" }} class="image">
+      </div>
+
+      <div class="score_details">
+        <div class='score'>{{totalScore}}</div>
+        <div class='suggestion'>{{shouldIWatch}}</div>
+        <div>{{uncertainText}}</div>
+        <div class='search_again suggestion'>{{#link-to 'search' classNames="white-link"}}Search again?{{/link-to}} | <span {{action 'moreInfo'}} class="more-info-link">More info</span></div>
+      </div>
+    </div>
+
+    {{#if needMoreInfo}}
+      {{partial 'more_info'}}
+    {{/if}}
+
+  </div>
+{{/view}}
