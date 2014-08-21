@@ -278,6 +278,8 @@ td.text-right {
   vertical-align: middle;
   display: inline-block;
   width: 30%;
+  border-style: solid;
+  border-color: white;
 }
 
 .score_details {
@@ -345,4 +347,8 @@ td.text-right {
 
 .linkedin {
   background: url("/assets/images/linkedin.png");
+}
+
+.movie-title {
+  font-size: 300%;
 }

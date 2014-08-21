@@ -2,7 +2,8 @@
   <div class='container'>
     <div class='movie'>
       <div class="image_container">
-        <img {{bind-attr src="posterImage" }} class="image">
+        <span class="movie-title">{{title}}</span>
+        <a {{bind-attr href="posterImage" }} class="image">Image Link</a>
       </div>
 
       <div class="score_details">
