@@ -17,13 +17,23 @@ export default Ember.Route.extend({
   },
 
   parsePoster: function(data) {
-    if (data.movie_results) {
+    if (data.movie_results.length > 0) {
       var results = data.movie_results[0];
       var imageLocation = 'http://image.tmdb.org/t/p/original' + results.poster_path;
       var obj = {imageLocation: imageLocation};
       return obj;
-    } else if (data.tv_results) {
+    } else if (data.tv_results.length > 0) {
       var results = data.tv_results[0];
+      var imageLocation = 'http://image.tmdb.org/t/p/original' + results.poster_path;
+      var obj = {imageLocation: imageLocation};
+      return obj;
+    } else if (data.tv_season_results.length > 0) {
+      var results = data.tv_season_results[0];
+      var imageLocation = 'http://image.tmdb.org/t/p/original' + results.poster_path;
+      var obj = {imageLocation: imageLocation};
+      return obj;
+    } else if (data.tv_episode_results.length > 0) {
+      var results = data.tv_episode_results[0];
       var imageLocation = 'http://image.tmdb.org/t/p/original' + results.poster_path;
       var obj = {imageLocation: imageLocation};
       return obj;
