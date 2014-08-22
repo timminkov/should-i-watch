@@ -43,14 +43,3 @@ export default Ember.ObjectController.extend({
   }.property('model.imdbID'),
 
 });
-
-var MovieParser = {
-  parse: function(data) {
-    var parsedData = {
-      title: data.Title
-    }
-    debugger;
-
-    return parsedData;
-  }
-}
