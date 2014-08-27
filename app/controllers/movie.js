@@ -13,7 +13,7 @@ export default Ember.ObjectController.extend({
 
   imdbImage: function() {
     var id = this.get('id');
-    $.getJSON('https://api.themoviedb.org/3/find/' + id + '?api_key=227fe3bb4564a1ba35150061d97e905c&external_source=imdb_id').done(function(data) {
+    $.getJSON('https://api.themoviedb.org/3/find/' + id + '?api_key=' + process.env.MOVIE_DB_KEY +'&external_source=imdb_id').done(function(data) {
       if (data.movie_results) {
         var results = data.movie_results[0];
         var imageLocation = 'http://image.tmdb.org/t/p/original/' + results.poster;

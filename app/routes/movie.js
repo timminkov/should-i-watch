@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   model: function(params) {
     return Ember.RSVP.hash({
       movie: $.getJSON('http://www.omdbapi.com/?tomatoes=true&i=' + params.id).then(this.parseMovie),
-      poster: $.getJSON('https://api.themoviedb.org/3/find/' + params.id + '?api_key=227fe3bb4564a1ba35150061d97e905c&external_source=imdb_id').then(this.parsePoster),
+      poster: $.getJSON('https://api.themoviedb.org/3/find/' + params.id + '?api_key=' + process.env.MOVIE_DB_KEY + '&external_source=imdb_id').then(this.parsePoster),
     });
   },
 
