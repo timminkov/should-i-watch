@@ -13,11 +13,10 @@ export default Ember.ObjectController.extend({
 
   imdbImage: function() {
     var id = this.get('id');
-    $.getJSON('https://api.themoviedb.org/3/find/' + id + '?api_key=' + process.env.MOVIE_DB_KEY +'&external_source=imdb_id').done(function(data) {
+    $.getJSON('https://api.themoviedb.org/3/find/' + id + '?api_key=' + YOUR_API_KEY_HERE +'&external_source=imdb_id').done(function(data) {
       if (data.movie_results) {
         var results = data.movie_results[0];
         var imageLocation = 'http://image.tmdb.org/t/p/original/' + results.poster;
-        debugger;
         this.set('imageLocation', imageLocation);
       } else if (data.tv_results) {
         var results = data.tv_results[0];
